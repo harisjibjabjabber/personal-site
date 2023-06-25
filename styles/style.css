@@ -14,8 +14,7 @@
                          "contact"
                          "footer";
    
-    min-height: 2000px;
-    height: 200vh;
+    
 }
 
 .text{
@@ -53,23 +52,24 @@ h1:hover{
 }
 
 .welcome{
-    grid-area: welcome;
+    grid-area: "welcome";
     background-color: #16213E;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center ;
 }
 
-video {
-    pointer-events: none;
-  }
+.funnypic > img{
+    padding: 30px;
+    min-height: 400px;
+    min-width: 470px;
+    max-height: 400px;
+    max-width: 470px ;
 
-.coding-video> video{
-    width:450px;
-    padding: 40px;
-    padding-bottom: 0;
-    
 }
+
+
 
 .about-me{
     text-align: center;
@@ -161,12 +161,86 @@ video {
 
 .contact{
     grid-area: contact;
-    background-color: #16213E; ;
-    
+    background-color: #16213E;
+    display: grid;
+    grid-template-areas: "contact-headings" "social-medias";
 }
+
+.contact-headings{
+    grid-area: "contact-headings";
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Belanosima', sans-serif;
+    color: whitesmoke;
+    font-size: 2rem;
+}
+.social-medias{
+    grid-area: "social-medias";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
 
 .footer{
     grid-area: footer;
+}
+
+.facebook > svg{
+    fill:	#4267B2;
+    opacity: 0.6;
+    transition: ease 0.4s;
+}
+
+.facebook > svg:hover{
+    fill: #3870e1;
+    opacity: 1;
+}
+
+.whatsapp > svg{
+    fill:	#25D366;
+    opacity: 0.6;
+    transition: ease 0.4s;
+}
+
+.whatsapp > svg:hover{
+    fill: 	#29ec71;
+    opacity: 1;
+}
+
+.github > svg{
+    fill:	#6e5494;
+    opacity: 0.6;
+    transition: ease 0.4s;
+}
+
+.github > svg:hover{
+    fill: #7549b7;
+    opacity: 1;
+}
+
+.twitter > svg{
+    fill:	#00acee;
+    opacity: 0.6;
+    transition: ease 0.4s;
+}
+
+.twitter > svg:hover{
+    fill: #0dbaff;
+    opacity: 1;
+}
+
+.footer > p {
+    background: linear-gradient(-45deg, #16213e, #0f3460, #533483, #e94560);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+    font-family: 'Belanosima', sans-serif;
+    color: whitesmoke;
+    font-size: 1rem;
+    font-weight: 100;
 }
 
 @keyframes gradient {
@@ -231,6 +305,15 @@ video {
         padding: 10px;
         max-width: 50vh;
         
+    }
+
+    .welcome{
+        grid-area: welcome;
+        background-color: #16213E;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center ;
     }
 }
   
